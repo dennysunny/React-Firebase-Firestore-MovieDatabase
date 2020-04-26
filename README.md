@@ -1,11 +1,19 @@
-.*Features*.
-      **List popular movies, upcoming movies, now playing movies,top rated movies
+**Features
+
+      >List popular movies, upcoming movies, now playing movies,top rated movies
+      
       > Search movies-Dynamic Search
+      
       > Auto-suggest movie, thumbnail, vote average for search function
+      
       > View detail movie info including posters, casts, trailers
+      
       > Recommended Movies and Similar movies for a movie
+      
       > Cast info and Profile
+      
       > Movies of a particular actor
+      
       > Top reviews about Movies
       > Search function everywhere
       > User authentication
