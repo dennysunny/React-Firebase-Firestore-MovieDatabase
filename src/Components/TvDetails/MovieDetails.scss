@@ -1,0 +1,529 @@
+@import "../../index.scss";
+.Details {
+    padding-bottom: 30em;
+    .firstImg {
+        height: 80vh;
+        width: 100%;
+    }
+    .row {
+        .col {
+            position: relative;
+            img {
+                width: 30em;
+                margin-bottom: 2em;
+            }
+            .hearts {
+                position: absolute;
+                top: 78%;
+                left: 60%;
+                background: red;
+                color: $white;
+                font-size: 3em;
+                width: 2em;
+                height: 2em;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 2em;
+                transition: all 0.5s linear;
+                &:hover {
+                    transform: scale(2.2);
+                }
+            }
+        }
+        .col {
+            .row {
+                h1 {
+                    letter-spacing: 0.2em;
+                    font-family: $primary-font;
+                    font-size: 5em;
+                    color: red;
+                    text-transform: uppercase;
+                    text-shadow: 2px 2px black;
+                    font-weight: bold;
+                    margin: 0 auto;
+                    span {
+                        font-size: 0.5em;
+                    }
+                }
+            }
+            .row {
+                p {
+                    font-size: 2em;
+                    font-family: $third-font;
+                    text-align: left;
+                    color: $blue;
+                }
+                .col {
+                    font-family: $secondary-font;
+                    h2 {
+                        font-weight: bold;
+                        color: $blue;
+                    }
+                }
+            }
+            .row {
+                .col {
+                    h1 {
+                        margin: 0 auto;
+                        font-size: 2em;
+                        color: $white;
+                        background: rgb(246, 1, 54);
+                        width: 3em;
+                        height: 3em;
+                        border-radius: 50%;
+                        line-height: 3em;
+                    }
+                }
+                .col {
+                    h3 {
+                        font-family: $primary-font;
+                        margin: 0 auto;
+                        font-size: 2em;
+                        color: $white;
+                        background: rgb(246, 1, 54);
+                        width: 3em;
+                        height: 3em;
+                        border-radius: 50%;
+                        line-height: 3em;
+                        text-shadow: 2px 2px $blue;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    .row {
+        font-family: $secondary-font;
+        color: $blue;
+        .col {
+            p {
+                font-size: 2em;
+            }
+        }
+        .col {}
+    }
+    .row {
+        font-family: $primary-font;
+        .castTitle {
+            color: red;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 56px;
+            margin-top: 0.7em;
+            margin-bottom: 0.7em;
+            display: block;
+            width: 100%;
+            text-align: left;
+            // text-shadow: 1px 1px $blue;
+        }
+        .card {
+            border: 0px solid $red;
+            // width: 15em;
+            &-img-top {
+                // // display: inline-block;
+                // width: 10em;
+                // height: 10em;
+                // border-radius: 10em;
+                //filter: grayscale(100%);
+            }
+            &-body {
+                background: $white;
+                padding: 0;
+                .card-title {
+                    margin-top: 0.5em;
+                    font-family: $secondary-font;
+                    font-size: 2em;
+                    color: $red;
+                    text-shadow: 1px 1px $blue;
+                }
+                .card-text {
+                    font-family: $third-font;
+                    font-size: 1.5em;
+                    color: $blue;
+                    margin-bottom: 0.5em;
+                }
+            }
+            transition: all 0.3s linear;
+            // border: 1px solid $yellow;
+            // border-radius: 1em;
+            &:hover {
+                box-shadow: 0 0.2px 0.9px rgba(0, 0, 0, 0.055), 0 0.6px 2.2px rgba(0, 0, 0, 0.112), 0 1.1px 4.1px rgba(0, 0, 0, 0.173), 0 2px 7.4px rgba(0, 0, 0, 0.245), 0 3.8px 13.8px rgba(0, 0, 0, 0.35), 0 9px 33px rgba(0, 0, 0, 0.54);
+                filter: blur(25);
+                transform: scale(0.9);
+            }
+        }
+    }
+    .container {
+        margin-top: 5em;
+        .row {
+            .similarTitle {
+                color: $primary-font;
+                font-weight: bold;
+                font-size: 60px;
+                display: block;
+                text-align: center;
+                width: 100%;
+                text-align: left;
+                // text-shadow: 1px 1px $blue;
+            }
+        }
+    }
+
+    .recc{
+        // font-size: 60px;
+        // font-weight: bold;
+        // position: relative;
+        // text-align: center;
+        // color: red;
+        letter-spacing: 0.2em;
+                    font-family: $primary-font;
+                    font-size: 5em;
+                    color: red;
+                    text-transform: uppercase;
+                    text-shadow: 2px 2px black;
+                    font-weight: bold;
+                    margin: 0 auto;
+    }
+
+    .review{
+        font-family: $primary-font;
+                    font-size: 5em;
+                    color: red;
+                    text-transform: uppercase;
+                    text-shadow: 2px 2px black;
+                    font-weight: bold;
+                    margin: 0 auto;
+    }
+
+    
+
+    .similar {
+        //margin-top: 5em;
+        //background:whitesmoke;
+        padding-top: 5em;
+        padding-bottom: 5em;
+        .card {
+            display: inline-block;
+            // border: 1px solid $white;
+            max-width: 35em;
+            border: none;
+            &-img-top {
+                 display: inline-block;
+                 width: 25em;
+                 height: 40em;
+                 border-radius: 2em;
+                // filter: grayscale(100%);
+                
+                 //width: 15em;
+            }
+            &-body {
+                // background: $white;
+                padding: 0;
+                .card-title {
+                    margin-top: 0.5em;
+                    font-family: $secondary-font;
+                    font-size: 2em;
+                    color: $red;
+                    text-shadow: 1px 1px $blue;
+                }
+                .card-text {
+                    font-family: $third-font;
+                    font-size: 1em;
+                    text-align: justify;
+                    color: $blue;
+                    margin-bottom: 0.5em;
+                }
+            }
+            transition: all 0.3s linear;
+            // border: 1px solid $yellow;
+            // border-radius: 1em;
+            &:hover {
+                box-shadow: 0 0.2px 0.9px rgba(0, 0, 0, 0.055), 0 0.6px 2.2px rgba(0, 0, 0, 0.112), 0 1.1px 4.1px rgba(0, 0, 0, 0.173), 0 2px 7.4px rgba(0, 0, 0, 0.245), 0 3.8px 13.8px rgba(0, 0, 0, 0.35), 0 9px 33px rgba(0, 0, 0, 0.54);
+                filter: drop-shadow(95);
+                transform: scale(0.8);
+            }
+        }
+    }
+    .videos {
+        margin-top: 5em;
+        .container {
+            .row {
+                .trailerTitle {
+                    font-family: $secondary-font;
+                    color: $blue;
+                    font-weight: bold;
+                    font-size: 56px;
+                    margin-bottom:2em;
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    margin-left: 0.3em;
+                }
+            }
+            .video {
+                margin-top: 0.3em;
+                margin-left: -0.8em;
+            }
+        }
+    }
+    .leftTitle {
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 524px) {
+    .Details {
+        .firstImg {
+            height: 30vh;
+            width: 100%;
+        }
+        .row {
+            .col {
+                position: relative;
+                img {
+                    width: 20em;
+                    margin-bottom: 2em;
+                }
+                .hearts {
+                    position: absolute;
+                    top: 70%;
+                    left: 57%;
+                    background: $yellow;
+                    color: $white;
+                    font-size: 3em;
+                    width: 2em;
+                    height: 2em;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 2em;
+                    transition: all 0.3s linear;
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+            .col {
+                .row {
+                    p {
+                        padding: 1em;
+                        font-size: 2em;
+                        font-family: $third-font;
+                        text-align: left;
+                        color: $blue;
+                    }
+                }
+            }
+        }
+        .row {
+            padding: 1.5em;
+            .col {
+                p {
+                    font-size: 1.5em;
+                }
+            }
+        }
+        .row {
+            .card {
+                width: 10em !important;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .Details {
+        .firstImg {
+            height: 30vh;
+            width: 100%;
+        }
+        .row {
+            .col {
+                position: relative;
+                .hearts {
+                    position: absolute;
+                    top: 50%;
+                    left: 65%;
+                }
+            }
+        }
+        .row {
+            padding: 1.5em;
+            .col {
+                p {
+                    font-size: 1.5em;
+                }
+            }
+        }
+        .row {
+            .card {
+                width: 10em !important;
+            }
+        }
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1100px) {
+    .Details {
+        .firstImg {
+            height: 50vh;
+            width: 100%;
+        }
+    }
+}
+
+.subhead{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: $secondary-font;
+    text-align: justify;
+    font-style: italic;
+
+}
+
+.author{
+    font-size: 22px;
+    font-style: bold;
+}
+
+.reviewDis {
+    color: $primary-font;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    text-align: left;
+    // text-shadow: 1px 1px $blue;
+}
+.created_by{
+    font-family: $secondary-font;
+    //background-color:rgb(129, 35, 35);
+    //border: dashed;
+   //margin-top: 1em;
+    font-size: 45px;
+    text-align: left ;
+    color: rgb(158, 4, 4);
+}
+
+.season{
+    text-align: left;
+    margin-top: 0.5em;
+    font-family: $third-font;
+    font-size: 2em;
+    color: rgb(204, 11, 11);
+
+}
+.seasonOverview{
+    text-align: justify;
+    font-size: 1.2em;
+    font-style: italic;
+    color: black;
+}
+
+.seasonName{
+    font-weight: bold;
+    color: rgb(235, 8, 8);
+    text-align: center;
+}
+
+.similarSeason {
+    //margin-top: 5em;
+    //background:whitesmoke;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    width:auto;
+    .card {
+        //display: inline-block;
+        // border: 1px solid $white;
+        width: 35em;
+        border-radius: 2em;
+        &-img-top {
+             display: inline-block;
+             width: 35em;
+             height: 40em;
+             border-radius: 2em;
+
+            // filter: grayscale(100%);
+            
+             //width: 15em;
+        }
+        &-body {
+            // background: $white;
+            padding: 0;
+            max-width: 35em;
+            .card-title {
+                margin-top: 0.5em;
+                font-family: $secondary-font;
+                font-size: 2em;
+                color: $red;
+                text-shadow: 1px 1px $blue;
+            }
+            .card-text {
+                font-family: $third-font;
+                font-size: 1em;
+                text-align: justify;
+                color: $blue;
+                margin-bottom: 0.5em;
+            }
+        }
+        // transition: all 0.3s linear;
+        // // border: 1px solid $yellow;
+        // // border-radius: 1em;
+        // &:hover {
+        //     box-shadow: 0 0.2px 0.9px rgba(0, 0, 0, 0.055), 0 0.6px 2.2px rgba(0, 0, 0, 0.112), 0 1.1px 4.1px rgba(0, 0, 0, 0.173), 0 2px 7.4px rgba(0, 0, 0, 0.245), 0 3.8px 13.8px rgba(0, 0, 0, 0.35), 0 9px 33px rgba(0, 0, 0, 0.54);
+        //     filter: drop-shadow(95);
+        //     transform: scale(0.8);
+        // }
+    }
+}
+
+.similarSeasons {
+    //margin-top: 5em;
+    //background:whitesmoke;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    
+    .card {
+        //display: inline-block;
+        // border: 1px solid $white;
+        width: 35em;
+        border-radius: 2em;
+        &-img-top {
+             display: inline-block;
+             width: 400px;
+             
+             border-radius: 2em;
+
+            // filter: grayscale(100%);
+            
+             //width: 15em;
+        }
+        &-body {
+            // background: $white;
+            padding: 0;
+            max-width: 35em;
+            .card-title {
+                margin-top: 0.5em;
+                font-family: $secondary-font;
+                font-size: 2em;
+                color: $red;
+                text-shadow: 1px 1px $blue;
+            }
+            .card-text {
+                font-family: $third-font;
+                font-size: 1em;
+                text-align: justify;
+                color: $blue;
+                margin-bottom: 0.5em;
+            }
+        }
+        // transition: all 0.3s linear;
+        // // border: 1px solid $yellow;
+        // // border-radius: 1em;
+        // &:hover {
+        //     box-shadow: 0 0.2px 0.9px rgba(0, 0, 0, 0.055), 0 0.6px 2.2px rgba(0, 0, 0, 0.112), 0 1.1px 4.1px rgba(0, 0, 0, 0.173), 0 2px 7.4px rgba(0, 0, 0, 0.245), 0 3.8px 13.8px rgba(0, 0, 0, 0.35), 0 9px 33px rgba(0, 0, 0, 0.54);
+        //     filter: drop-shadow(95);
+        //     transform: scale(0.8);
+        // }
+    }
+}
