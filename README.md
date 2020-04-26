@@ -1,5 +1,5 @@
-Features
-      . List popular movies, upcoming movies, now playing movies,top rated movies
+.*Features*.
+      **List popular movies, upcoming movies, now playing movies,top rated movies
       > Search movies-Dynamic Search
       > Auto-suggest movie, thumbnail, vote average for search function
       > View detail movie info including posters, casts, trailers
