@@ -1,4 +1,9 @@
-**Features
+# Movie Browser Using React & Firebase
+
+A React project with Firestore and Firebase.
+It uses [The Movie Database (TMDb) API](https://www.themoviedb.org/documentation/api) to display data.
+
+## Features
 
       > List popular movies, upcoming movies, now playing movies,top rated movies
       
@@ -39,13 +44,13 @@
       > After Register/Login create your own watchlist, add/remove movies, tv shows
       
 
-  Firebase for realtime database
+  - Firebase for realtime database
   
-  Firestore for storing data with query's 
+  - Firestore for storing data with query's 
   
-  Fetching data from TMDB using tmdb api
+  - Fetching data from TMDB using tmdb api
   
-  Authentication using firebase
+  - Authentication using firebase
 
 --------------------------------------------------------------------------------
 
