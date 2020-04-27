@@ -8,47 +8,49 @@ https://reactfirebasetmr.firebaseapp.com/
 
 ## Features	
 
-      > List popular movies, upcoming movies, now playing movies,top rated movies	
+      > List Popular Movies, Upcoming Movies, Now Playing Movies,Top Rated Movies	
       	
-      > Search movies-Dynamic Search	
+      > Search Movies-Dynamic Search	
       	
-      > Auto-suggest movie, thumbnail, vote average for search function	
+      > Auto-suggest Movie, Thumbnail, Vote Average for Search function	
       	
-      > View detail movie info including posters, casts, trailers	
+      > View detail movie info including Posters, Casts, Trailers	
       	
-      > Recommended Movies and Similar movies for a movie	
+      > Recommended Movies and Similar Movies for a Selected Movie	
       	
-      > Cast info and Profile	
+      > Cast - Character info and Profile	View
       	
-      > Movies of a particular actor	
+      > Movies of a Selected Actor	
       	
-      > Top reviews about Movies	
+      > Top Reviews about Movies	
       	
-      > Search function everywhere	
+      > Search Function Everywhere	
       	
-      > Firebase User authentication	
+      > Firebase User Authentication	
       	
       > Signin with Email ,Google or Github	
       	
-      > User specific watchlist	
+      > User Specific Fav Watchlist	
       	
-      > Easy navigation through features	
+      > Easy Navigation through all Features	
+      
+      > List Popular and Top Rated TV Shows
       	
-      > View detail tv info including poster, casts, trailers, seasons, episodes,	
+      > View Detail TV info including Poster, Casts, Seasons, Episodes,	
       	
-      > similar tv shows for the selected show	
+      > Similar TV Shows for the Selected Show	
       	
       > Detailed info about each Seasons and Episodes	
       	
-      > All Episode discription and cast	
+      > All Episode Discription and Cast	
       	
-      > View detail cast info including, biography, pictures, movies, tv shows	
+      > View Detail Cast Info Including, Biography, Movies, TV Shows	
       	
-      > After Register/Login create your own watchlist, add/remove Movies, TV shows	
+      > After Register/Login create your own Watchlist, Add/Remove Movies, TV shows	
       
-      > Realtime Database for easy sync
+      > Realtime Database for Easy Sync
       
-      > Users can access the contents and favorites list from any device
+      > Users can Access the Contents and Favorites List from Any Device
       
       > Better Optimizations for Desktop-Tablets-Smartphones
       	
