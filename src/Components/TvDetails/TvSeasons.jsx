@@ -92,7 +92,7 @@ import "../../index.scss"
 
             <Container className=" p-0">
                 <Row>
-                  <h1 className="recc"> All Episodes of Season {seasoninfo.season_number} </h1> 
+                  <h1 className="recc">  Season {seasoninfo.season_number} Episodes </h1> 
                 </Row>   
 
                          <div className="similarSeasons">

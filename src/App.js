@@ -18,6 +18,7 @@ import "./App.scss";
 import PersonDetails from "./Components/MovieDetails/PersonDetails";
 import TvDetails from "./Components/TvDetails/TvDetails"
 import TvSeasons from "./Components/TvDetails/TvSeasons"
+import TvHome from "./Components/TvHome/TvHome";
 
 
 
@@ -30,6 +31,7 @@ const App = () => {
         <Switch>
           <Route path="/signin" component={SignIn} />
           <Route exact path="/" component={Home} />
+          <Route exact path="/tv" component={TvHome}/>
           <Route path="/user" component={User} />
           <Route path="/movie/:id" component={MovieDetails} />
           <Route path="/person/:pid" component={PersonDetails}/>     

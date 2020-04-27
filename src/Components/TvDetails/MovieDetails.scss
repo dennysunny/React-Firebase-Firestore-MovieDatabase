@@ -431,15 +431,15 @@
     //background:whitesmoke;
     padding-top: 5em;
     padding-bottom: 5em;
-    width:auto;
+    
     .card {
         //display: inline-block;
         // border: 1px solid $white;
-        width: 35em;
+        max-width: 35em;
         border-radius: 2em;
         &-img-top {
              display: inline-block;
-             width: 35em;
+             width: 25em;
              height: 40em;
              border-radius: 2em;
 

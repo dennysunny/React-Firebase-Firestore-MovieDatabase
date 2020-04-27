@@ -418,7 +418,7 @@ const MovieDetails = () => {
               
             </Container>
 
-      <Container >
+      {/* <Container >
           <h1  className="review">Your Reviews #todo</h1><br></br>
       </Container>
 
@@ -426,7 +426,7 @@ const MovieDetails = () => {
         <textarea class = "form-control" rows = "5" placeholder="Write your Review here" >
 
         </textarea>
-      </Container>
+      </Container> */}
 
             
 

@@ -11,7 +11,7 @@ const NavTop = () => {
     clearVisible,
     getPopular,
     getTv,
-    //getTop_rated,
+    getTop_rated,
     refreshPage,
     clearSearch,
     currentUser,
@@ -60,12 +60,13 @@ const NavTop = () => {
             </Link>
 
             <Link
-              to="/"
+              to="/tv"
               className="pl-4 pr-5 nav-link"
               onClick={() => {
                 clearVisible();
                 getTv();
-                //getTop_rated();
+                //getPopular();
+                getTop_rated();
                 refreshPage();
               }}
             >

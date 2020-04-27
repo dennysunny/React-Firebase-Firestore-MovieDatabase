@@ -142,7 +142,8 @@ const PersonDetails = () => {
 
                             <Col>
                             <i class="fab fa-instagram"></i>
-                            <a href="https://www.instagram.com/${external_ids.instagram_id}`" className="s_name" target="_blank" rel="noopener noreferrer"> {external_ids.instagram_id} </a>
+                            <a href={external_ids.instagram_id} className="s_name" target="_blank" rel="noopener noreferrer"> {external_ids.instagram_id} </a>
+                            {/* <a href="https://www.instagram.com/${external_ids.instagram_id}`" className="s_name" target="_blank" rel="noopener noreferrer"> {external_ids.instagram_id} </a> */}
                             </Col>
 
                             <Col>
