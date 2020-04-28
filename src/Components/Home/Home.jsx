@@ -8,7 +8,6 @@ import MoviesComing from "../MoviesComing/MoviesComing.jsx";
 import MoviesTop from "../MoviesTop/MoviesTop";
 import TvShows from "../TvShows/TvShows";
 import TvTop from "../TvTop/TvTop";
-import Privacy from "../Privacy/Privacy"
 
 import "./Home.scss";
 
@@ -23,7 +22,6 @@ const Home = () => {
       <MoviesTop />
       <TvShows />
       <TvTop/>
-      <Privacy/>
 
     </div>
   );
