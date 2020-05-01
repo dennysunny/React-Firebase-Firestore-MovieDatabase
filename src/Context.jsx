@@ -71,6 +71,7 @@ class MovieContextProvider extends Component {
   unsubscribeFromAuth = null;
 
   componentDidMount = () => {
+    
     this.getTrending();
     this.getPopular();
     this.getTv();
@@ -81,7 +82,7 @@ class MovieContextProvider extends Component {
     this.handleTvClick();
     this.searchMovie();
     this.clearSearch();
-
+    
     // set the currentusers state as signed in user with google
     //userAuth comes from firebase
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
@@ -98,6 +99,26 @@ class MovieContextProvider extends Component {
             }
           });
         });
+        //https://stackoverflow.com/questions/14226803/wait-5-seconds-before-executing-next-line
+        console.log("beftimeout")
+        await new Promise(resolve => setTimeout(resolve, 4000)); // 3 sec
+        console.log("After")
+        //window.location.reload();
+        console.log("compdidmount",this.state.currentUser.id)
+        firebase.database().ref(`users/${this.state.currentUser.id}/favorite`).on('value', res => {
+          const resMovies = res.val();
+          const copyFavorites = [];
+  
+          console.log("resmo",resMovies)
+  
+            for (let objKey in resMovies) {
+              resMovies[objKey].key = objKey;
+              copyFavorites.push(resMovies[objKey]);
+              this.setState({ favorite: copyFavorites });
+            }
+  
+        })
+
       } else {
         //if user logs out then state will be userAuth(if theres no userAuth then its null)
         this.setState({
@@ -708,6 +729,8 @@ getTop_rated = () => {
     let copyFavorites = [...favorite];
     let key=movie.id
 
+    console.log(favorite)
+    console.log(copyFavorites)
     console.log(key)
     console.log("inside")
     console.log("moviee",movie)
@@ -717,25 +740,23 @@ getTop_rated = () => {
     if (!favorite.includes(movie)) {
       //copyFavorites.push(movie);
       //this.setState({ favorite: copyFavorites });
-      
-     
-    
+         
      
       firebase.database().ref(`users/${this.state.currentUser.id}/favorite/${key}`).set(movie)
 
-      firebase.database().ref(`users/${this.state.currentUser.id}/favorite`).on('value', res => {
-        const resMovies = res.val();
-        const copyFavorites = [];
+      // firebase.database().ref(`users/${this.state.currentUser.id}/favorite`).on('value', res => {
+      //   const resMovies = res.val();
+      //   const copyFavorites = [];
 
-        console.log("resmo",resMovies)
+      //   console.log("resmo",resMovies)
 
-          for (let objKey in resMovies) {
-            resMovies[objKey].key = objKey;
-            copyFavorites.push(resMovies[objKey]);
-            this.setState({ favorite: copyFavorites });
-          }
+      //     for (let objKey in resMovies) {
+      //       resMovies[objKey].key = objKey;
+      //       copyFavorites.push(resMovies[objKey]);
+      //       this.setState({ favorite: copyFavorites });
+      //     }
 
-      })
+      // })
       //if it includes, remove
       //https://stackoverflow.com/questions/5767325/how-do-i-remove-a-particular-element-from-an-array-in-javascript
     } else {
