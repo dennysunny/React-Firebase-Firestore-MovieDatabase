@@ -55,31 +55,59 @@ export const database=firebase.database();
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
-firestore.settings(
-    {timestampsInSnapshots : true}
-)
+// firestore.settings(
+//     {timestampsInSnapshots : true}
+// )
 
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => {
-    
+    try{
     auth.signInWithPopup(provider);
     //firebase.auth().signInWithRedirect(provider);
+    alert("Login Sucessfull")
+    
+    } catch(error){
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorCode)
+        alert(errorMessage)
+    }
 };
 
 const providerFb=new firebase.auth.FacebookAuthProvider();
 //providerFb.setCustomParameters({ prompt: 'select_account' });
 export const signInWithFB = () => {
     //firebase.auth().signInWithPopup(providerFb);
+    try{
     firebase.auth().signInWithPopup(providerFb);
     console.log("facebook login")
+    alert("Login Sucessfull")
+    }
+    catch(error){
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorCode)
+        alert(errorMessage)
+    }
 };
 
 const providerGit = new firebase.auth.GithubAuthProvider();
 
 export const signInWithGit = () => {
+    try{
     //firebase.auth().signInWithPopup(providerGit)
     firebase.auth().signInWithPopup(providerGit);
     console.log("git login")
+    alert("Login Sucessfull")
+    } catch(error){
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorCode)
+        console.log(errorMessage)
+        alert(error)
+    }
 };
+
+
 export default firebase;
