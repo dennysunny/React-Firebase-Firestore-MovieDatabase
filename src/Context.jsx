@@ -63,7 +63,8 @@ class MovieContextProvider extends Component {
       pageRefreshed: false,
       currentUser: null,
       //favorite movies array to store favorite movies
-      favorite: []
+      favorite: [],
+      result: [],
     };
   }
 
@@ -108,14 +109,15 @@ class MovieContextProvider extends Component {
         firebase.database().ref(`users/${this.state.currentUser.id}/favorite`).on('value', res => {
           const resMovies = res.val();
           const copyFavorites = [];
-  
+
           console.log("resmo",resMovies)
   
             for (let objKey in resMovies) {
               resMovies[objKey].key = objKey;
               copyFavorites.push(resMovies[objKey]);
-              this.setState({ favorite: copyFavorites });
+              this.setState({ favorite: copyFavorites, result: resMovies});
             }
+            console.log("favvvv",this.state.result)
   
         })
 
@@ -770,7 +772,7 @@ getTop_rated = () => {
   render() {
     return (
       <MovieContext.Provider
-        //these methods will be able to used by consumer after putting them here
+        
         value={{
           ...this.state,
           getTrending: this.getTrending,
