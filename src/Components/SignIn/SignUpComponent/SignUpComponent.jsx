@@ -34,7 +34,15 @@ class SignUpComponent extends Component {
 				email: '',
 				password: ''
 			});
+			alert("Account Created..!!")
+			
 		} catch (error) {
+			if (error === 'auth/weak-password') {
+				alert('The password is too weak.');
+			  }
+			  else{
+				alert(error);
+			  }
 			console.error(error);
 		}
 	};
@@ -90,7 +98,7 @@ class SignUpComponent extends Component {
 						<Form.Label>Password</Form.Label>
 						<Form.Control
 							type="password"
-							placeholder="Password"
+							placeholder="Password (Min 6 characters)"
 							name="password"
 							value={password}
 							onChange={this.handleChange}

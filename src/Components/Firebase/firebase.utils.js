@@ -3,6 +3,7 @@ import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/database';
 
+
 const config = {
     apiKey: "AIzaSyCeqXH2LySPklDbDEyRTJsi9veMFbrupmM",
     authDomain: "reactfirebasetmr.firebaseapp.com",
@@ -62,51 +63,64 @@ export const firestore = firebase.firestore();
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => {
-    try{
-    auth.signInWithPopup(provider);
-    //firebase.auth().signInWithRedirect(provider);
-    alert("Login Sucessfull")
     
-    } catch(error){
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log(errorCode)
-        alert(errorMessage)
-    }
+    auth.signInWithPopup(provider).then(function(result) {
+        //alert("Login Sucessfull")
+        var user = result.user;
+        console.log("user:",user)
+        if(user){
+            alert("Login Successfull")
+        }
+        })
+        .catch(function(error){
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(errorCode)
+            alert(errorMessage)
+        });
 };
 
 const providerFb=new firebase.auth.FacebookAuthProvider();
 //providerFb.setCustomParameters({ prompt: 'select_account' });
 export const signInWithFB = () => {
     //firebase.auth().signInWithPopup(providerFb);
-    try{
-    firebase.auth().signInWithPopup(providerFb);
+    
+    firebase.auth().signInWithPopup(providerFb).then(function(result) {
     console.log("facebook login")
-    alert("Login Sucessfull")
+    //alert("Login Sucessfull")
+    var user = result.user;
+    console.log("user:",user)
+    if(user){
+        alert("Login Successfull")
     }
-    catch(error){
+    })
+    .catch(function(error){
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log(errorCode)
         alert(errorMessage)
-    }
+    });
 };
 
 const providerGit = new firebase.auth.GithubAuthProvider();
 
 export const signInWithGit = () => {
-    try{
+    
     //firebase.auth().signInWithPopup(providerGit)
-    firebase.auth().signInWithPopup(providerGit);
-    console.log("git login")
-    alert("Login Sucessfull")
-    } catch(error){
+    firebase.auth().signInWithPopup(providerGit).then(function(result) {
+    //alert("Login Sucessfull")
+    var user = result.user;
+    console.log("user:",user)
+    if(user){
+        alert("Login Successfull");
+    }
+    })
+    .catch(function(error){
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log(errorCode)
-        console.log(errorMessage)
-        alert(error)
-    }
+        alert(errorMessage)
+    });
 };
 
 

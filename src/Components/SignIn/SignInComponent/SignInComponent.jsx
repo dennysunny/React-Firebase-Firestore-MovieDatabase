@@ -24,6 +24,26 @@ const SignInComponent = () => {
 		alert(error);
 	  }
 	};
+
+	const forgotPassword = async (event) => {
+		event.preventDefault();
+	
+		try {
+		  //wait for the auth to response
+		  await auth.sendPasswordResetEmail(input.email);
+		  //if theres a user like that, it will sign in and then set the states to empty
+		  //setInput({})
+		  alert('Password Reset Email Sent!');
+		} catch (error) {
+			var errorCode = error.code;
+			var errorMessage = error.message;
+			if (errorCode  === 'auth/invalid-email') {
+				alert(errorMessage);
+			  } else if (errorCode === 'auth/user-not-found') {
+				alert(errorMessage);
+			  }
+		}
+	  };
   
 	const handleChange = (e) =>
 	  setInput({
@@ -65,6 +85,16 @@ const SignInComponent = () => {
 			block
 		  >
 			SIGN IN
+		  </Button >
+
+		  <Button
+		  	onClick={forgotPassword}
+			variant="outline-dark"
+			className="btn-lg mt-5 p-3 forgotButton"
+			type="submit"
+			block
+		  >
+			FORGOT PASSWORD
 		  </Button >
 
 		  <br></br>

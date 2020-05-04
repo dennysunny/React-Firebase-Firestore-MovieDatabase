@@ -35,13 +35,25 @@
     .loginButton {
         font-family: $secondary-font;
         border: none;
-        background: $blue;
+        background: rgb(37, 102, 252);
         color: $white;
         transition: all 0.5s ease-in-out;
         &:hover {
             background: $red;
         }
     }
+
+  .forgotButton {
+        font-family: $secondary-font;
+        border: none;
+        background: rgb(253, 0, 0);
+        color: $white;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+            background: rgb(212, 209, 5);
+        }
+    }
+
     .googleButton {
         font-family: $secondary-font;
         transition: all 0.7s ease-in-out;

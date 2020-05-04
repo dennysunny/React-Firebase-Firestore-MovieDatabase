@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { withRouter } from "react-router-dom";
 
 
-//actually in index.js so that everytime a link is clinked, it will take  to top of the opened page.
+//actually in index.js so that everytime a link is clicked, it will go to top of the  page.
 class ScrollToTop extends Component {
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {

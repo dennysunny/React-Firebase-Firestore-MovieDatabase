@@ -35,7 +35,8 @@ const TvDetails = () => {
     refreshPage,
     tvDetails,
     currentUser,
-    favorite,
+    //favorite,
+    result,
     addFavorite,
     genres,
     created_by,
@@ -64,6 +65,23 @@ const TvDetails = () => {
     number_of_seasons,
   } = tvDetails;
 
+  // const favExists = favorite.some(favorite => favorite.name === tvDetails.name);
+  // console.log("favorate",favorite)
+  // console.log("favorate idd",tvDetails.id)
+
+
+   for (let i in result) {
+             console.log("For loop",result[i])
+             if(tvDetails.id===result[i].id){
+              var val=result[i].id;
+               console.log("its here",val)
+               break
+                  
+             }
+            }
+      
+console.log("valuee is",val)
+
   return (
     <div className="Details" >
       
@@ -72,6 +90,8 @@ const TvDetails = () => {
         alt=""
         className="firstImg"
       />
+
+      
 
       <Container className="mt-5 p-0">
         <Row>
@@ -89,7 +109,8 @@ const TvDetails = () => {
                 onClick={() => addFavorite(tvDetails)}
               >
                 {currentUser ? (
-                  favorite.includes(tvDetails) ? (
+                  
+                   (tvDetails.id===val) ? (
                     <i
                       className="fa fa-heart"
                       aria-hidden="true"
