@@ -28,7 +28,7 @@ https://reactfirebasetmr.firebaseapp.com/
       	
       > Firebase User Authentication	
       	
-      > Signin with Email ,Google or Github	
+      > Signin with Email ,Google ,Facebook or Github	
       	
       > User Specific Fav Watchlist	
       	
@@ -87,5 +87,6 @@ https://reactfirebasetmr.firebaseapp.com/
  - To Build the project	
 
           yarn build	
+
 
 
