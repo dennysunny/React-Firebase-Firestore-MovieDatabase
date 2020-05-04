@@ -80,7 +80,7 @@ const TvDetails = () => {
              }
             }
       
-console.log("valuee is",val)
+//console.log("valuee is",val)
 
   return (
     <div className="Details" >
