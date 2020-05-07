@@ -1,0 +1,45 @@
+@import "../../../index.scss";
+.signUpComponent {
+    .signUpTitle {
+        font-family: $primary-font;
+        color: $blue;
+    }
+    .subtitle {
+        font-family: $secondary-font;
+        color: $blue;
+    }
+    .form-control {
+        background: none;
+        background-color: $white;
+        color: $blue;
+        font-size: 1.8em;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid $blue;
+        &:focus {
+            outline: none;
+        }
+        input[type='password'] {
+            letter-spacing: 0.3em;
+        }
+    }
+    .form-label {
+        font-family: $secondary-font;
+        display: flex;
+        justify-content: flex-start;
+        color: $red;
+    }
+    .signUpButton {
+        font-family: $secondary-font;
+        border: none;
+        background: rgb(1, 117, 1);
+        color: $white;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+            background:  rgb(37, 102, 252);
+        }
+    }
+}

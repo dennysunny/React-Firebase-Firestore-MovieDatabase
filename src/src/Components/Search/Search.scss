@@ -1,0 +1,49 @@
+@import "../../index.scss";
+.form {
+    position: absolute;
+    &-inline {
+        font-size: 2em;
+        width: 100%;
+        .form-control {
+            font-family: $secondary-font;
+            font-size: 1em;
+            width: calc(100% - 2em);
+            margin: 0;
+            background: none;
+            color: rgb(219, 9, 9);
+            padding: 10px 10px 10px 10px;
+            display: block;
+            border: none;
+            border-radius: 0;
+            text-transform: capitalize;
+            // border-bottom: 1px solid #28214d;
+            &::placeholder {
+                color:rgb(238, 12, 12);
+                font-family: $secondary-font;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+            input[type="text"] {
+                letter-spacing: 0.3em;
+                
+            }
+        }
+        button {
+            background:rgb(221, 8, 8);
+            border: none;
+            font-size: 1em;
+            color: $white;
+        }
+    }
+}
+
+@media (min-width: 300px) and (max-width:779px) {
+    .form {
+        position: absolute;
+        &-inline {
+            padding-top: 3em;
+            margin-bottom: 1em;
+        }
+    }
+}
