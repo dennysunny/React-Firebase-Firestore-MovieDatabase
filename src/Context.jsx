@@ -42,10 +42,13 @@ class MovieContextProvider extends Component {
       countries: [],
       similar: [],
       videos: [],
+      tvVideos: [],
       reviews: [],
+      tvReviews: [],
       //images:[],
       recommendations: [],
       tvRecommendations: [],
+      tvSimilar: [],
       person: "",
       external_ids: [],
       movie_credits: [],
@@ -519,6 +522,23 @@ getTop_rated = () => {
       });
   }
 
+  getTvSimilar = () =>{
+    axios
+      .get(
+        `https://api.themoviedb.org/3/tv/${this.state.tid}/similar?api_key=${TMDB_KEY}&language=en-US&page=1`
+      )
+      .then(response => {
+        const apiResponse = response.data;
+        this.setState({
+          tvSimilar: apiResponse.results
+        });
+        // console.log(apiResponse.results);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+
   getReviews  = () =>{
     axios
       .get(
@@ -530,6 +550,23 @@ getTop_rated = () => {
           reviews: apiResponse.results
         });
         // console.log(apiResponse.results);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+
+  getTvReviews  = () =>{
+    axios
+      .get(
+        `https://api.themoviedb.org/3/tv/${this.state.tid}/reviews?api_key=${TMDB_KEY}&language=en-US&page=1`
+      )
+      .then(response => {
+        const apiResponse = response.data;
+        this.setState({
+          tvReviews: apiResponse.results
+        });
+         console.log("inside tv reviews",apiResponse.results);
       })
       .catch(error => {
         console.log(error);
@@ -562,6 +599,23 @@ getTop_rated = () => {
         const apiResponse = response.data;
         this.setState({
           videos: apiResponse.results
+        });
+        // console.log(apiResponse.results);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
+
+  getTvVideos = () => {
+    axios
+      .get(
+        `https://api.themoviedb.org/3/tv/${this.state.tid}/videos?api_key=${TMDB_KEY}&language=en-US&page=1`
+      )
+      .then(response => {
+        const apiResponse = response.data;
+        this.setState({
+          tvVideos: apiResponse.results
         });
         // console.log(apiResponse.results);
       })
@@ -622,6 +676,10 @@ getTop_rated = () => {
         this.getTvDetails();
         console.log("tv id",tid)
         this.getTvReccomendation();
+        this.getTvSimilar();
+        this.getTvVideos();
+        this.getTvReviews();
+        console.log("tv review called")
       }
     );
   };
