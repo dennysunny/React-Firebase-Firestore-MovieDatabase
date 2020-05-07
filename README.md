@@ -29,6 +29,8 @@ https://reactfirebasetmr.firebaseapp.com/
       > Firebase User Authentication	
       	
       > Signin with Email ,Google ,Facebook or Github	
+
+      > Forgot Password Option to Reset Password through Registered Email
       	
       > User Specific Fav Watchlist	
       	
@@ -36,13 +38,19 @@ https://reactfirebasetmr.firebaseapp.com/
       
       > List Popular and Top Rated TV Shows
       	
-      > View Detail TV info including Poster, Casts, Seasons, Episodes,	
+      > View Detail TV info including Poster, Casts, Trailers
+      
+      > Show info about Last Air Episode , Seasons, Episodes,	
+
+      > Read Top Reviews for a TV Show
       	
-      > Similar TV Shows for the Selected Show	
+      > Similar TV Shows and Recommended Shows for the Selected Show	
       	
       > Detailed info about each Seasons and Episodes	
+
+      > View Cast Info for Each Season
       	
-      > All Episode Discription and Cast	
+      > All Episode Discription and Other Info	
       	
       > View Detail Cast Info Including, Biography, Movies, TV Shows	
       	
