@@ -35,11 +35,11 @@
     .signUpButton {
         font-family: $secondary-font;
         border: none;
-        background: rgb(5, 187, 5);
+        background: rgb(1, 117, 1);
         color: $white;
         transition: all 0.5s ease-in-out;
         &:hover {
-            background: rgb(5, 161, 251);
+            background:  rgb(37, 102, 252);
         }
     }
 }

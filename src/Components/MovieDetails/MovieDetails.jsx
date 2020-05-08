@@ -259,7 +259,7 @@ const MovieDetails = () => {
 
       <Container className=" p-0">
         <Row>
-          <h1 className="recc">  Reccommended Movies for  :  {title}  </h1>
+          <h1 className="recc">  Reccommended Movies for    {title}  </h1>
         </Row>
       </Container>
       <div className="similar">
@@ -304,7 +304,7 @@ const MovieDetails = () => {
          
       <Container className=" p-0">
         <Row>
-          <h1 className="recc">  Similar Movies to  :  {title}  </h1>
+          <h1 className="recc">  Similar Movies to    {title}  </h1>
         </Row>
       </Container>
       <div className="similar">
@@ -361,7 +361,7 @@ const MovieDetails = () => {
           return (
             <Container className="p-0" key={video.id}>
               <Row className="">
-                <h1 className=" recc">{title} | Trailer </h1>
+                <h1 className=" recc">{title}  Trailer </h1>
               </Row><Swiper>
               <Row
                 className="video "

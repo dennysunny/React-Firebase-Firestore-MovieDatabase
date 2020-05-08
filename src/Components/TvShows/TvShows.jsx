@@ -13,8 +13,19 @@ const TvShows = () => {
       addFavorite,
       favorite,
       currentUser,
-      loadMore
+      loadMore,
+      //result
     } = useContext(MovieContext);
+
+    // for (let j in result) {
+    //   console.log("For loop",result[j])
+    //   if(i.id===result[j].id){
+    //    var val=result[j].id;
+    //     console.log("its here",val)
+    //     break
+           
+    //   }
+    //  }
 
     return(
         <Container className="homePageMovies mt-3">
@@ -22,6 +33,7 @@ const TvShows = () => {
         <Col>
           <>
             <>
+            
               {tv.slice(0, visible).map(i => {
                 return (
                   <div className="card text-white fade-in" key={i.id}>

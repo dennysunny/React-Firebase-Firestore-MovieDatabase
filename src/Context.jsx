@@ -67,6 +67,7 @@ class MovieContextProvider extends Component {
       currentUser: null,
       //favorite movies array to store favorite movies
       favorite: [],
+	  //retrieved data from firebase to make fav redd
       result: [],
     };
   }

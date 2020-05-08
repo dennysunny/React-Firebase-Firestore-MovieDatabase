@@ -1,5 +1,5 @@
 import React, { useContext  } from "react";
-import { Container, Col, Row,Card} from "react-bootstrap";
+import { Container, Col, Row,Card,CardColumns} from "react-bootstrap";
 import { MovieContext } from "../../Context";
 import Swiper from "react-id-swiper";
 import LazyLoad from "react-lazyload";
@@ -38,6 +38,8 @@ const TvDetails = () => {
     //favorite,
     result,
     addFavorite,
+    tvReviews,
+    tvVideos,
     genres,
     created_by,
     languages,
@@ -45,6 +47,7 @@ const TvDetails = () => {
     last_episode_to_air,
     seasons,
     tvRecommendations,
+    tvSimilar,
   } = useContext(MovieContext);
 
   const {
@@ -367,6 +370,108 @@ const TvDetails = () => {
                       })}
                     </Swiper>
               </div>
+
+              <Container className=" p-0">
+                <Row>
+                  <h1 className="recc"> Similar Shows To {name} </h1> 
+                </Row>    
+              </Container>
+
+                <div className="similar">
+                    <Swiper {...params}>
+                      {tvSimilar.slice(0, 8).map(tv => {
+                        return (
+                          <Link
+                            to={`/tv/${tv.id}`}
+                            style={{ width: "25em" }}
+                            className="card ml-3"
+                            key={tv.id}
+                            onClick={() => {
+                              handleTvClick(tv.id);
+                              refreshPage();
+                              console.log(tv.id)
+                            }}
+                          >
+                            <LazyLoad>
+                              <Card.Img
+                                variant="top"
+                                src={`https://image.tmdb.org/t/p/w154${tv.poster_path}`}
+                               
+                              />
+
+                            </LazyLoad>
+                          </Link>
+                        );
+                      })}
+                    </Swiper>
+              </div>
+
+              <div className="videos">
+        
+        {tvVideos.slice(0, 1).map(video => {
+          return (
+            <Container className="p-0" key={video.id}>
+              <Row className="">
+                <h1 className=" recc">{name} | Trailer </h1>
+              </Row><Swiper>
+              <Row
+                className="video "
+                style={{
+                  position: "relative",
+                  paddingBottom: "56.25%" ,
+                  paddingTop: 2,
+                  height: 0
+                }}
+              >
+
+                <iframe
+                  title={video.name}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "95%",
+                    height: "95%"
+                  }}
+                  src={`https://www.youtube.com/embed/${video.key}`}
+                  frameBorder="5"
+                />
+                
+              </Row>
+              </Swiper>
+            </Container>
+          );
+        })}
+      </div>
+
+              <Container className=" p-0">
+                <Row>
+                  <h1 className="recc"> Top Reviews </h1> 
+                </Row>    
+              </Container>
+
+              <Container>
+            
+            {tvReviews.slice(0,5).map(review => {
+              return(
+
+                <CardColumns className="subhead" >
+                  
+                  <Card className="author">
+                    <Card.Body style={{width : "50em"}}>
+                      <Card.Title className="authorb">{review.author}</Card.Title>
+                      <Card.Text >{review.content.slice(0,1000)}......</Card.Text>
+                      <Card.Text>
+                        <small className="text-muted">Continue Reading <a href= {review.url}>{review.url}</a></small>
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>    <hr />               
+                </CardColumns>
+
+              )})}
+              
+            </Container>
+
     </div>
   );
 };

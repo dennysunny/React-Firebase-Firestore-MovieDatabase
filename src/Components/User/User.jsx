@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
 import "./User.scss";
 
 const User = () => {
-  const { currentUser, favorite, addFavorite,handleClick } = useContext(MovieContext);
+  const { currentUser, favorite, addFavorite,handleClick,handleTvClick } = useContext(MovieContext);
+  
 
   return (
     <Container className="User">
@@ -27,32 +28,56 @@ const User = () => {
                     key={movie}
                     className="col-xs-6 col-lg-4 col-xl-3 mb-5 pl-0 pr-5 mt-3"
                   >
-                   <Link 
-                      to={`/movie/${movie.id}`}
-                    onClick={() => {
-                      handleClick(movie.id);
-                      console.log(movie.id)
-                      //refreshPage();
-                    }}
-                   > 
-                   <LazyLoad>
-                    <img
-                      src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-                      className="userImg"
-                      alt={movie}
-                     
-                      
-                     
-                      // style={{ width:"20em"}}
-                    />
-                    </LazyLoad>
-                    </Link>
+                    {movie.first_air_date ? (
+                        <Link 
+                        to={`/tv/${movie.id}`}
+                        onClick={() => {
+                        handleTvClick(movie.id);
+                        console.log(movie.id)
+                        //refreshPage();
+                      }}
+                     > 
+                     <LazyLoad>
+                      <img
+                        src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+                        className="userImg"
+                        alt={movie}
+                       
+                        
+                       
+                        // style={{ width:"20em"}}
+                      />
+                      </LazyLoad>
+                      </Link>
+                    ):(
+                      <Link 
+                        to={`/movie/${movie.id}`}
+                      onClick={() => {
+                        handleClick(movie.id);
+                        console.log(movie.id)
+                        //refreshPage();
+                      }}
+                     > 
+                     <LazyLoad>
+                      <img
+                        src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+                        className="userImg"
+                        alt={movie}
+                       
+                        
+                       
+                        // style={{ width:"20em"}}
+                      />
+                      </LazyLoad>
+                      </Link>
+                    )}
+                   
                     <div className="">
                       <h6
                         className="card-title hearts"
                         onClick={() => addFavorite(movie)}
                       >
-                        {favorite.includes(movie.poster_path) ? (
+                        {!favorite.includes(movie.poster_path) ? (
                           <i
                             className="fa fa-heart"
                             aria-hidden="true"

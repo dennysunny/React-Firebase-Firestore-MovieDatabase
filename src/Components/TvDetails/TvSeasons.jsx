@@ -92,10 +92,11 @@ import "../../index.scss"
 
             <Container className=" p-0">
                 <Row>
-                  <h1 className="recc">  Season {seasoninfo.season_number} Episodes </h1> 
+                  <h1 className="recc">  Season {seasoninfo.season_number} Episodes  </h1> 
                 </Row>   
 
                          <div className="similarSeasons">
+                           
                              <p>
                                 <span   className="authorb">Air Date :   {seasoninfo.air_date} </span>   
                             </p>    
@@ -126,6 +127,9 @@ import "../../index.scss"
                                          <p>
                                             <span className="leftTitle">Episode : </span> {credit.episode_number}
                                          </p>
+                                         <p>
+                                            <span   className="leftTitle"> Popularity : </span>  {credit.vote_average ? `${credit.vote_average*10}%` : 'N/A'}    
+                                        </p> 
 
                                         <p>
                                             <span  className="leftTitle">Overview : </span>                      
