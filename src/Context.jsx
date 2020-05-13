@@ -67,8 +67,10 @@ class MovieContextProvider extends Component {
       currentUser: null,
       //favorite movies array to store favorite movies
       favorite: [],
+      wishlist: [],
 	  //retrieved data from firebase to make fav redd
       result: [],
+      watch: [],
     };
   }
 
@@ -106,7 +108,7 @@ class MovieContextProvider extends Component {
         });
         //https://stackoverflow.com/questions/14226803/wait-5-seconds-before-executing-next-line
         console.log("beftimeout")
-        await new Promise(resolve => setTimeout(resolve, 4000)); // 3 sec
+        await new Promise(resolve => setTimeout(resolve, 4000)); // 4 sec
         console.log("After")
         //window.location.reload();
         console.log("compdidmount",this.state.currentUser.id)
@@ -114,14 +116,29 @@ class MovieContextProvider extends Component {
           const resMovies = res.val();
           const copyFavorites = [];
 
-          console.log("resmo",resMovies)
+          console.log("retrivedmovies",resMovies)
   
             for (let objKey in resMovies) {
               resMovies[objKey].key = objKey;
               copyFavorites.push(resMovies[objKey]);
               this.setState({ favorite: copyFavorites, result: resMovies});
             }
-            console.log("favvvv",this.state.result)
+            console.log("favourites",this.state.result)
+  
+        })
+
+        firebase.database().ref(`users/${this.state.currentUser.id}/wishlist`).on('value', res => {
+          const resWish = res.val();
+          const copyWishlist = [];
+
+          console.log("wish movies",resWish)
+  
+            for (let objKey in resWish) {
+              resWish[objKey].key = objKey;
+              copyWishlist.push(resWish[objKey]);
+              this.setState({ wishlist: copyWishlist, watch: resWish});
+            }
+            console.log("wish",this.state.watch)
   
         })
 
@@ -828,6 +845,32 @@ getTop_rated = () => {
     }
   };
 
+  addWishlist = (movie) => {
+    const { wishlist } = this.state;
+    let copyWishlist = [...wishlist];
+    let key=movie.id
+
+    console.log()
+    console.log(copyWishlist)
+    console.log(key)
+    console.log("inside wish")
+    console.log("moviee",movie)
+    console.log(this.state.currentUser.id)
+
+    if (!wishlist.includes(movie)) {
+      //copyFavorites.push(movie);
+      //this.setState({ favorite: copyFavorites });
+         
+      firebase.database().ref(`users/${this.state.currentUser.id}/wishlist/${key}`).set(movie)
+
+    } else {
+      console.log("outside wish")
+      copyWishlist = copyWishlist.filter(eachMovie => eachMovie !== movie);
+      this.setState({ wishlist: copyWishlist });
+      firebase.database().ref(`users/${this.state.currentUser.id}/wishlist/`).child(key).remove();
+    }
+  };
+
   render() {
     return (
       <MovieContext.Provider
@@ -857,6 +900,7 @@ getTop_rated = () => {
           refreshPage: this.refreshPage,
           updateMovieInfo: this.updateMovieInfo,
           addFavorite: this.addFavorite,
+          addWishlist: this.addWishlist,
           getPerson:this.getPerson,
           getMovie_credits: this.getMovie_credits,
           getPersonImages:this.getPersonImages,

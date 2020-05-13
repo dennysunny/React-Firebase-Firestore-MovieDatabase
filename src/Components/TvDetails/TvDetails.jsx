@@ -37,7 +37,9 @@ const TvDetails = () => {
     currentUser,
     //favorite,
     result,
+    watch,
     addFavorite,
+    addWishlist,
     tvReviews,
     tvVideos,
     genres,
@@ -78,6 +80,16 @@ const TvDetails = () => {
              if(tvDetails.id===result[i].id){
               var val=result[i].id;
                console.log("its here",val)
+               break
+                  
+             }
+            }
+
+     for (let j in watch) {
+             console.log("For loop watch",watch[j])
+             if(tvDetails.id===watch[j].id){
+              var watchl=watch[j].id;
+               console.log("its watch",watchl)
                break
                   
              }
@@ -130,6 +142,32 @@ const TvDetails = () => {
                 )}
               </h6>
             </div>
+
+            <div className="">
+              <h6
+                className="card-title wishlist"
+                onClick={() => addWishlist(tvDetails)}
+              >
+                {currentUser ? (
+                  
+                   (watch.id===watchl) ? (
+                    <i
+                    className="fas fa-photo-video"
+                      aria-hidden="true"
+                      style={{ color: "red" }}
+                    ></i>
+                  ) : (
+                    <i className="fas fa-photo-video" aria-hidden="true"></i>
+                  )
+                ) : (
+                  <Link to="/signin" style={{ color: "#FDFFFC" }}>
+                    {" "}
+                    <i className="fas fa-photo-video" aria-hidden="true"></i>{" "}
+                  </Link>
+                )}
+              </h6>
+            </div>
+
           </Col>
 
           <Col>

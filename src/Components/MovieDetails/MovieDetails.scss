@@ -37,9 +37,28 @@
                 line-height: 2em;
                 transition: all 0.5s linear;
                 &:hover {
+                    transform: scale(0.8);
+                }
+            }
+
+            .wishlist {
+                position: absolute;
+                top: 78%;
+                left: 20%;
+                background: tomato;
+                color: $white;
+                font-size: 3em;
+                width: 2em;
+                height: 2em;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 2em;
+                transition: all 0.3s linear;
+                &:hover {
                     transform: scale(1.5);
                 }
             }
+
         }
         .col {
             .row {
@@ -339,6 +358,7 @@
                         transform: scale(1.2);
                     }
                 }
+               
             }
             .col {
                 .row {
@@ -483,6 +503,24 @@
     font-family: $third-font;
     font-size: 2em;
     text-align: justify;
+    transition: all 0.3s linear;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.wishlist {
+    position: absolute;
+    top: 78%;
+    left: 17%;
+    background: $yellow;
+    color: $white;
+    font-size: 3em;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2em;
     transition: all 0.3s linear;
     &:hover {
         transform: scale(1.2);

@@ -7,6 +7,7 @@ import Footer from "./Components/Footer/Footer";
 import Modal from "./Components/Modal/Modal.jsx";
 import SignIn from "./Components/SignIn/SignIn.jsx";
 import User from "./Components/User/User.jsx";
+import Watchlist from "./Components/User/Watchlist"
 import Privacy from "./Components/Privacy/Privacy.jsx"
 
 import MovieContextProvider from "./Context.jsx";
@@ -33,6 +34,7 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/tv" component={TvHome}/>
           <Route path="/user" component={User} />
+          <Route path="/wishlist" component={Watchlist} />
           <Route path="/movie/:id" component={MovieDetails} />
           <Route path="/person/:pid" component={PersonDetails}/>     
           <Route path="/privacy" component={Privacy} />

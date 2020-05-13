@@ -26,7 +26,24 @@
                 line-height: 2em;
                 transition: all 0.5s linear;
                 &:hover {
-                    transform: scale(2.2);
+                    transform: scale(1.5);
+                }
+            }
+            .wishlist {
+                position: absolute;
+                top: 78%;
+                left: 20%;
+                background: rgb(255, 187, 0);
+                color: $white;
+                font-size: 3em;
+                width: 2em;
+                height: 2em;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 2em;
+                transition: all 0.5s linear;
+                &:hover {
+                    transform: scale(1.5);
                 }
             }
         }

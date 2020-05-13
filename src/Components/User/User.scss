@@ -42,6 +42,23 @@
             transform: scale(1.2);
         }
     }
+    .wishlist {
+        position: absolute;
+        top: 78%;
+        left: 60%;
+        background: rgb(238, 21, 21);
+        color: $white;
+        font-size: 2.5em;
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 2em;
+        transition: all 0.3s linear;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
 }
 
 @media (min-width: 300px) and (max-width:750px) {

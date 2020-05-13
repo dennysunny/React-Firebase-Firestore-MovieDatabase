@@ -44,21 +44,22 @@
                 font-size: 1.5em;
                 color:red;
                 font-weight: bold;
-                transition: all 0.5s ease-in-out;
+                transition: all 0.2s ease-in-out;
                 &:hover{
-                    transform: scale(1.2);
+                    transform: scale(1.1);
                 }
                 &:focus {
                     color: rgb(59, 101, 240);
                 }
             }
             .userSign {
-                width: 6em;
+                width: 10em;
                 
                 .signOut {
                     
                     color:white;
                     border: dashed;
+                    margin-top: -0.2em;
                     border-width: .2em;
                     border-color: red;
                     border-radius: .5em;
@@ -66,20 +67,34 @@
                     float: left;
                     transition: all 0.2s linear;
                     &:hover {
-                        transform: scale(1.2);
+                        transform: scale(.8);
                     }
                 }
-                .fa-chalkboard-teacher {
+                .fa-heart {
                     float: right;
                     color:rgb(255, 0, 43);
                     position: absolute;
                     font-size: 2em;
-                    margin-top: -0.2em;
-                    margin-left: 1.5em;
-                    transition: all 0.5s ease-in-out;
+                    margin-top: -0.1em;
+                    margin-left: -0.2em;
+                    transition: all 0.3s ease-in-out;
                     &:hover {
-                        color: rgb(46, 60, 248);
-                        transform: scale(0.9);
+                        color: rgb(238, 13, 118);
+                        transform: scale(0.8);
+                    }
+                }
+
+                .fa-photo-video {
+                    float: right;
+                    color:rgb(255, 0, 43);
+                    position: absolute;
+                    font-size: 2em;
+                    margin-top: -0.1em;
+                    margin-left: 1.8em;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        color: rgb(255, 2, 171);
+                        transform: scale(0.8);
                     }
                 }
             }
@@ -110,7 +125,7 @@
                     position: absolute;
                     left: 230%;
                     // margin-bottom: 10em;
-                    .fa-chalkboard-teacher {
+                    .fa-heart {
                         float: right;
                         color:rgb(247, 47, 29);
                         font-size: 1.5em;

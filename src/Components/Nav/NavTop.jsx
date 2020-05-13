@@ -82,7 +82,12 @@ const NavTop = () => {
                   </div>
                   <div>
                     <Link to="/user">
-                    <i class="fas fa-chalkboard-teacher"></i>
+                    <i class="fas fa-heart"></i>
+                    </Link>
+                  </div>
+                  <div>
+                    <Link to="/wishlist">
+                    <i class="fas fa-photo-video"></i>
                     </Link>
                   </div>
                 </div>

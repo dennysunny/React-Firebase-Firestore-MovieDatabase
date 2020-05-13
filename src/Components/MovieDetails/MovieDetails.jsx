@@ -39,7 +39,9 @@ const MovieDetails = () => {
     details,
     currentUser,
     favorite,
+    wishlist,
     addFavorite,
+    addWishlist,
     //getPerson,
     genres,
     companies,
@@ -110,6 +112,31 @@ const MovieDetails = () => {
                   <Link to="/signin" style={{ color: "#FDFFFC" }}>
                     {" "}
                     <i className="fa fa-heart" aria-hidden="true"></i>{" "}
+                  </Link>
+                )}
+              </h6>
+            </div>
+
+            <div className="">
+              <h6
+                className="card-title wishlist"
+                onClick={() => addWishlist(details)}
+                
+              >
+                {currentUser ? (
+                  wishlist.includes(details) ? (
+                    <i
+                      className="fas fa-photo-video"
+                      aria-hidden="true"
+                      style={{ color: "red" }}
+                    ></i>
+                  ) : (
+                    <i className="fas fa-photo-video" aria-hidden="true"></i>
+                  )
+                ) : (
+                  <Link to="/signin" style={{ color: "#FDFFFC" }}>
+                    {" "}
+                    <i className="fas fa-photo-video" aria-hidden="true"></i>{" "}
                   </Link>
                 )}
               </h6>
