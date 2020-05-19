@@ -16,6 +16,17 @@ const Footer = () => {
       <Container>
         <Row>
           <Col className="mt-5 p-0 col-xs-12 col-md-6">
+              <a href="https://www.themoviedb.org/">
+              <img
+                src={require("../../Assets/tmdb.svg")}
+                style={{ width: "8em", marginTop: "4.5em" }}
+                className="float-right"
+                alt=""
+              />
+            </a>
+          </Col>
+
+          <Col className="pl-5 d-block d-lg-none">
             <Link to="/">
               <img
                 src={require("../../logo_transparent.png")}
