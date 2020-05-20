@@ -1,4 +1,4 @@
-# Movie Browser Using React & Firebase	
+# Movie Database Using React & Firebase	
 
 A React project with Firestore and Firebase.	
 It uses [The Movie Database (TMDb) API](https://www.themoviedb.org/documentation/api) to display data.	
