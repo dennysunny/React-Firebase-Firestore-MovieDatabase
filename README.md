@@ -1,4 +1,4 @@
-# Movie Browser Using React & Firebase	
+# Movie Database Using React & Firebase	
 
 A React project with Firestore and Firebase.	
 It uses [The Movie Database (TMDb) API](https://www.themoviedb.org/documentation/api) to display data.	
@@ -9,6 +9,8 @@ https://reactfirebasetmr.firebaseapp.com/
 ## Features	
 
       > List Popular Movies, Upcoming Movies, Now Playing Movies,Top Rated Movies	
+      
+      > Responsive Design
       	
       > Search Movies-Dynamic Search	
       	
@@ -32,7 +34,9 @@ https://reactfirebasetmr.firebaseapp.com/
 
       > Forgot Password Option to Reset Password through Registered Email
       	
-      > User Specific Fav Watchlist	
+      > User Specific Movie, Shows Wishlist	
+      
+      > User Specific Favourite List for Movies and Shows
       	
       > Easy Navigation through all Features	
       
@@ -54,7 +58,7 @@ https://reactfirebasetmr.firebaseapp.com/
       	
       > View Detail Cast Info Including, Biography, Movies, TV Shows	
       	
-      > After Register/Login create your own Watchlist, Add/Remove Movies, TV shows	
+      > After Register/Login create your own Watchlist, Favourite List, Add/Remove Movies, TV shows	
       
       > Realtime Database for Easy Sync
       
