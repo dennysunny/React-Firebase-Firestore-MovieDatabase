@@ -62,40 +62,10 @@ const Footer = () => {
               </h1>
             )}
           </Col>
-          <Col className=" pl-5 d-block d-lg-none">
-            {/* <a href="https://www.themoviedb.org/">
-              <img
-                src={require("../../Assets/tmdb.svg")}
-                style={{ width: "8em", marginTop: "4.5em" }}
-                className="float-right"
-                alt=""
-              />
-            </a> */}
-
-              <h4 className="footerText"> 
-                <em>
-                <div>
-                  <Link to="/privacy" className="pl-4 pr-5 nav-link">
-                    {/* if currentUser has a user, it will return true. If its null(initial state) it will return false(null is falsy value) */}
-                    {/* {currentUser ? (
-                      <div className="userSign">
-                        <div onClick={() => Privacy()} className="signOut">
-                          Privacy
-                                </div>
-                        <div>
-                          <Link to="/privacy">
-                            <i className="fas fa-user-astronaut"></i>
-                          </Link>
-                        </div>
-                      </div>
-                    ) : (
-                        <div className="userSign">Privacy</div>
-                      )} */}
-                  </Link>
-                  </div>
-                </em>
-              </h4>
-
+          <Col className="privacyfooter">
+              <Link to ="/privacy">
+                <i class="fas fa-heart">Privacy and Policy</i>
+              </Link>
           </Col>
         </Row>
       </Container>
