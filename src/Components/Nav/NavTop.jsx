@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Navbar, Nav, Image, Container } from "react-bootstrap";
 import "./Nav.scss";
+import "../../App.scss";
 import { Link } from "react-router-dom";
 import Search from "../Search/Search";
 import { MovieContext } from "../../Context";

@@ -10,3 +10,16 @@
 /* font-family: 'PT Sans', sans-serif;
 font-family: 'Lato', sans-serif;
 font-family: 'Metrophobic', sans-serif; */
+
+.light-mode {
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.25s ease-out;
+}
+
+  
+.dark-mode {
+    background-color: #1a1919;
+    color: #999;
+}
+  
