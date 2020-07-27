@@ -64,7 +64,7 @@ const Footer = () => {
           </Col>
           <Col className="privacyfooter">
               <Link to ="/privacy">
-                <i class="fas fa-heart">Privacy and Policy</i>
+                <i class="fa fa-lock"> Privacy and Policy</i>
               </Link>
           </Col>
         </Row>
